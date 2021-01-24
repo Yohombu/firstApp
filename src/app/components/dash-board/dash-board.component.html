@@ -1,0 +1,32 @@
+<nav class="nav-bar">
+  <div class="ham-wrap" (click)="toggleSlide()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+  </div>
+</nav>
+
+
+<div class="left-slider" *ngIf="leftSideVisibleState" [@sliderLeft]>
+
+  <p class="txt-welcome">Hello IJSE</p>
+  <hr style="background-color: white">
+  <ul class="nav-list">
+    <li>
+      <a routerLink="/DashBoard/manageRooms">Room Configuration</a>
+    </li>
+    <li>
+      <a routerLink="/DashBoard/manageReservation">Manage Reservation</a>
+    </li>
+    <li>
+      <a routerLink="/DashBoard/reviews">Reviews</a>
+    </li>
+    <li>
+      <a routerLink="/DashBoard/logout">Sign-out</a>
+    </li>
+  </ul>
+
+</div>
+
+
+<router-outlet></router-outlet>
